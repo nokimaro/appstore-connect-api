@@ -163,6 +163,15 @@ class Client
             case 'betagroups':
                 $api = new Api\BetaGroups($this);
                 break;
+            case 'prerelease':
+                $api = new Api\PrereleaseVersions($this);
+                break;
+            case 'apps':
+                $api = new Api\Apps($this);
+                break;
+            case 'builds':
+                $api = new Api\Builds($this);
+                break;
             default:
                 throw new InvalidArgumentException('未定义的接口');
         }
