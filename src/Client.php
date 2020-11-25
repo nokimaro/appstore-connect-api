@@ -172,6 +172,9 @@ class Client
             case 'builds':
                 $api = new Api\Builds($this);
                 break;
+            case 'appstoreversions':
+                $api = new Api\AppStoreVersions($this);
+                break;
             default:
                 throw new InvalidArgumentException('未定义的接口');
         }
