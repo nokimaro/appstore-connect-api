@@ -11,8 +11,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "rmccue/requests": "^1.7",
-        "php-curl-class/php-curl-class": "^8.6"
+        "php-curl-class/php-curl-class": "^9.1"
     },
     "autoload": {
         "psr-4": {
