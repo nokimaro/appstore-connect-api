@@ -25,7 +25,7 @@ trait HttpClient
             $this->curl->setHeader($key, $value);
         }
         $this->curl->get($url, $params);
-        return $this->wrapContent($this->curl->getResponse());
+        return $this->wrapContent($this->curl->response);
     }
 
     public function postJson($url, array $body = [], array $headers = [])
@@ -36,7 +36,7 @@ trait HttpClient
         }
         $this->curl->setHeader('Content-Type', 'application/json');
         $this->curl->post($url, $body);
-        return $this->wrapContent($this->curl->getResponse());
+        return $this->wrapContent($this->curl->response);
     }
 
     public function delete($url, array $params = [], array $headers = [])
@@ -46,7 +46,7 @@ trait HttpClient
             $this->curl->setHeader($key, $value);
         }
         $this->curl->delete($url, $params);
-        return $this->wrapContent($this->curl->getResponse());
+        return $this->wrapContent($this->curl->response);
     }
 
     protected function wrapContent($content)
